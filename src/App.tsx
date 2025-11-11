@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const urlDelObjeto360 =
+    "https://sketchfab.com/models/oWRKLxNqOINsmjijBrOxTWgOgGY/embed";
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="fullscreen-container">
+      {/* Cuadro flotante con el título */}
+      <div className="title-box">
+        <h1>🧪 Mi Laboratorio 360</h1>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+
+      {/* Visor 3D */}
+      <iframe
+        title="Car"
+        src={urlDelObjeto360}
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        allowFullScreen
+        loading="lazy"
+      />
+
+      {/* Créditos Sketchfab */}
+      <div className="credits-overlay">
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          <a
+            href="https://sketchfab.com/3d-models/car-oWRKLxNqOINsmjijBrOxTWgOgGY"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Car
+          </a>{" "}
+          by{" "}
+          <a
+            href="https://sketchfab.com/hra"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hra
+          </a>{" "}
+          on{" "}
+          <a
+            href="https://sketchfab.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Sketchfab
+          </a>
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

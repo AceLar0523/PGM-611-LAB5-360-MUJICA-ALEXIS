@@ -48,28 +48,3 @@ html, body, #root {
   text-align: center;
 }
 
-/* Créditos Sketchfab en la parte inferior */
-.credits-overlay {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  font-size: 13px;
-  padding: 6px 12px;
-  border-radius: 8px;
-  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-  z-index: 10;
-}
-
-.credits-overlay a {
-  color: #1CAAD9;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.credits-overlay a:hover {
-  text-decoration: underline;
-}
